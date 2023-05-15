@@ -1,10 +1,26 @@
+	<?php
+
+	$name = $_GET["name"];
+        $surname = $_GET["surname"];
+	$age = $_GET["age"];
+	$address = $_GET["address"];
+	$email = $_GET["email"];
+	
+	echo $name;
+	echo $surname;
+	echo $age;
+	echo $address;
+	echo $email;
+		
+	?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Info</title>
 </head>
 <body>
-	<form action="" method="POST">
+	<form action="" method="GET">
 		<label for="naam">name:</label>
 		<input type="text" name="name" id="name" required><br>
 
@@ -23,20 +39,5 @@
 		<input type="submit" value="Submit">
 	</form>
 
-	<?php
-
-	$naam = $_POST["name"];
-    $achternaam = $_POST["surname"];
-	$leeftijd = $_POST["age"];
-	$adres = $_POST["address"];
-	$email = $_POST["email"];
-	
-	echo $name;
-	echo $surname;
-	echo $age;
-	echo $address;
-	echo $email;
-		
-	?>
 </body>
 </html>
