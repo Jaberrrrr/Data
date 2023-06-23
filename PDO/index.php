@@ -4,13 +4,11 @@ $username = "root";
 $password = "";
 $dbname = "winkell";
 
-// Maak verbinding met de database
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Verbinding mislukt: " . $conn->connect_error);
 }
 
-// Selecteer alle gegevens uit de tabel producten
 $sql = "SELECT * FROM producten ORDER BY product_code";
 $result = $conn->query($sql);
 ?>
@@ -50,6 +48,5 @@ $result = $conn->query($sql);
 </html>
 
 <?php
-// Sluit de databaseverbinding
 $conn->close();
 ?>
